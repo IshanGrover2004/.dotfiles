@@ -6,7 +6,7 @@ sudo pacman -Syu git base-devel --noconfirm --needed
 git clone https://aur.archlinux.org/yay.git /tmp/yay
 cd /tmp/yay && makepkg -si --noconfirm --needed
 
-yay -Syu python rustup nodejs npm make cmake unzip neovim kitty fd lazygit btop stow --noconfirm --needed
+yay -Syu python rustup nodejs npm make cmake unzip neovim kitty fd lazygit btop stow zoxide fish starship xclip --noconfirm --needed
 
 # Nvim config
 # mv ~/.config/nvim ~/.config/nvim.bak
@@ -18,3 +18,6 @@ rustup update stable
 
 # Enable configs
 stow --adopt ../
+
+# Change shell to fish
+chsh -s "$(which fish)"
