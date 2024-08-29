@@ -45,8 +45,8 @@ return {
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
-        ["[b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        ["]b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        ["L"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        ["H"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
         ["<leader>T"] = { "<cmd>TodoTelescope<cr>", desc = "Open TODOs in telecope" },
         ["<leader>mp"] = { "<cmd>MarkdownPreview<cr>", desc = "Start markdown preview" },
         ["<leader>ms"] = { "<cmd>MarkdownPreviewStop<cr>", desc = "Stop markdown preview" },
