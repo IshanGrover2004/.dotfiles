@@ -1,5 +1,5 @@
 README.md
 .git
 .gitignore
-scripts/*
+scripts
 kde-shortcuts.kksrc
