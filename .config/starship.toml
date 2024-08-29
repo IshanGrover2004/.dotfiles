@@ -1,0 +1,141 @@
+# [time]
+# disabled = false
+# time_format = "%R"                                      # Hour:Minute Format
+# style = "bg:#1d2230"
+# format = '[[ 󱑍 $time ](bg:#1C3A5E fg:#8DFBD2)]($style)'
+
+# format = """\
+# $username\
+# $directory\
+# $git_branch\
+# $
+# """
+
+# Don't print a new line at the start of the prompt
+add_newline = true
+
+[directory]
+truncation_length = 10
+format = "[ $path]($style)[$lock_symbol]($lock_style) "
+style = "bold cyan"
+read_only = "🔒"
+read_only_style = "bold italic white"
+
+[username]
+style_user = "bold #ea00d9"
+show_always = true
+format = "[[󰣇 ](bold white)$user: ]($style)"
+
+# makes prompt a single line
+[line_break]
+disabled = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[cmd_duration]
+min_time = 1_000                         # Show command duration over 1,000 milliseconds (= 1 sec)
+format = '[\[🕙$duration\]](bold yellow)'
+
+[character]
+error_symbol = "[✗](bold #ff0000)"
+success_symbol = "[❯](bold #ea00d9)"
+
+# These symbols will only show when battery levels are 20% or less
+[battery]
+# full_symbol = "󰁹 "
+charging_symbol = "⚡️"
+# discharging_symbol = "󰁺 "
+
+[[battery.display]] # "bold red" style when capacity is between 0% and 20%
+threshold = 20
+style = "bold red"
+discharging_symbol = "󰁺 "
+
+[[battery.display]] # "bold yellow" style when capacity is between 20% and 35%
+threshold = 35
+style = "bold yellow"
+discharging_symbol = "󰁼 "
+
+[[battery.display]] # "bold yellow" style when capacity is between 35% and 50%
+threshold = 50
+style = "bold yellow"
+discharging_symbol = "󰁾 "
+
+[[battery.display]] # "bold green" style when capacity is between 50% and 75%
+threshold = 65
+style = "bold green"
+discharging_symbol = "󰂁 "
+
+[[battery.display]] # "bold green" style when capacity is between 75% and 90%
+threshold = 80
+style = "bold green"
+discharging_symbol = "󰂂 "
+
+[[battery.display]] # "bold green" style when capacity is between 90% and 100%
+threshold = 100
+style = "bold green"
+discharging_symbol = "󰁹 "
+
+# Clear visibility for exit codes
+[status]
+style = "red"
+symbol = "💣"
+format = '[\[$symbol$status\]]($style) '
+disabled = false
+
+[python]
+format = "[$symbol]($style) "
+style = "bold #f57800"
+symbol = "󱔎"
+# pyenv_version_name = true
+
+[rust]
+format = "[$symbol]($style) "
+symbol = "🦀"
+style = "bold green"
+
+[c]
+format = "[$symbol]($style) "
+symbol = ""
+style = "bold #f57800"
+
+[nodejs]
+format = "[$symbol]($style) "
+symbol = "󰎙"
+style = "bold #f57800"
+
+[java]
+format = "[$symbol]($style) "
+symbol = ""
+style = "bold #f57800"
+
+[php]
+format = "[$symbol]($style) "
+symbol = ""
+style = "bold #f57800"
+
+[cmake]
+format = "[$symbol]($style) "
+symbol = "󰔷 "
+style = "bold #f57800"
+
+[docker_context]
+format = "[$symbol]($style) "
+symbol = "🐳 "
+style = "bold #f57800"
+
+[git_branch]
+format = '[[on](bold white) $symbol$branch(:$remote_branch) ]($style)'
+symbol = " "
+
+[hg_branch]
+format = "[[on](bold white) $symbol$branch ]($style)"
+symbol = " "
+
+[git_status]
+disabled = true
+
+[git_metrics]
+disabled = true
